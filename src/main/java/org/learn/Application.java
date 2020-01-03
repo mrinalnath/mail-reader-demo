@@ -26,6 +26,7 @@ public class Application {
 		properties.put("mail.starttls.enable", true);
 		properties.put("mail.imap.starttls.enable", true);
 		properties.put("mail.imap.ssl.enable", true);
+		properties.put("mail.imap.auth.plain.disable", true);
 
 		return Session.getDefaultInstance(properties);
 	}
