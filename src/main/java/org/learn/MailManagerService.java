@@ -27,7 +27,7 @@ public class MailManagerService extends RouteBuilder{
 		String password = applicationConfiguration.getMailReceiverPassword();
 		String folder = applicationConfiguration.getMailReceiverFolder();
 		
-		return "imaps://" + host + "?"	+ "username=" + username + "&" + "password=" + password 
+		return "imap://" + host + ":993?"	+ "username=" + username + "&" + "password=" + password 
 				+ "&debugMode=true&unseen=true&" + "folderName=" 
 				+ folder + "&session=#emailSession";
 		//+ "&connectionTimeout=100000";//+ setSSLPropertiesIfRequired(instance);
